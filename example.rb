@@ -26,7 +26,7 @@ content.layout = layout
 
 label1 = JLabel.new(" foo")
 label2 = JLabel.new(" bar")
-label3 = JLabel.new(" yeah!")
+label3 = JLabel.new(" some long text")
 
 text1 = JTextField.new()
 text2 = JTextField.new()
