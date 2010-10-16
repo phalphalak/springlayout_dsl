@@ -2,7 +2,7 @@
 
 == Usage
 
-taken from {example.rb}[example.rb]:
+taken from {example.rb}[./example.rb]:
   require 'springlayout_dsl'
   require 'java'
   
