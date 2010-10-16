@@ -22,6 +22,11 @@ Here is how I have set up jruby to work with Ubuntu 9.04 (Jaunty Jackalope)
 
 Now you should be able to
   jruby -S rake
+
+== Running the example
+
+  jruby example.rb
+
 == Note on Patches/Pull Requests
  
 * Fork the project.
