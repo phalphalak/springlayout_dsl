@@ -2,7 +2,7 @@
 $:.unshift File.expand_path(File.dirname(__FILE__))
 $:.unshift File.expand_path(File.dirname(__FILE__)<<"/lib")
 
-print "working dir: \n" << ($:.join("\n"))
+print "working dir: \n" << ($:.join("\n")) << "\n" 
 print "Ruby version: " << RUBY_VERSION << "\n\n"
 
 require 'springlayout_dsl'
