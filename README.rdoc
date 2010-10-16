@@ -2,6 +2,12 @@
 
 Description goes here.
 
+<b>test</b>
+  foo
+  <b>test</b>
+  bar
+test
+
 == Usage
   require 'springlayout_dsl'
   require 'java'
