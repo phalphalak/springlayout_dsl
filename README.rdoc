@@ -2,7 +2,7 @@
 
 == Usage
 
-taken from {example.rb}[link:Phalphalak/springlayout_dsl/blob/master/example.rb] (see {screenshot here}[link:Phalphalak/springlayout_dsl/blob/master/example_frame.jpg]):
+taken from {example.rb}[link:Phalphalak/springlayout_dsl/blob/master/example.rb] (see {screenshot}[link:Phalphalak/springlayout_dsl/blob/master/example_frame.jpg]):
   require 'springlayout_dsl'
   require 'java'
   
