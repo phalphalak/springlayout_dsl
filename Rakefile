@@ -7,9 +7,8 @@ begin
     gem.name = "springlayout_dsl"
     gem.summary = %Q{A DSL for Java's SpringLayout}
     gem.description = %Q{TODO: longer description of your gem}
-    gem.email = "phalphalak@gmail.com"
     gem.homepage = "http://github.com/phalphalak/springlayout_dsl"
-    gem.authors = ["Roman"]
+    gem.authors = ["Phalphalak"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
@@ -23,6 +22,13 @@ RSpec::Core::RakeTask.new(:spec) do |task|
   task.pattern = "spec/**/*_spec.rb"
 #  task.spec_opts = spec_opts
 end
+
+#RSpec::Core::RakeTask.new(:rcov) do |task|
+#  task.rcov = true
+#  task.pattern = "spec/**/*_spec.rb"
+##  task.spec_opts = spec_opts
+#end
+
 
 #require 'spec/rake/spectask'
 #Spec::Rake::SpecTask.new(:spec) do |spec|
