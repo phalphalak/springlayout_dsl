@@ -2,7 +2,12 @@
 
 == Usage
 
-taken from {example.rb}[link:Phalphalak/springlayout_dsl/blob/master/example.rb] (see {screenshot}[link:Phalphalak/springlayout_dsl/blob/master/example_frame.jpg]):
+The code in {example.rb}[http://github.com/Phalphalak/springlayout_dsl/blob/master/example.rb] would result in an JFrame looking like this:
+
+http://github.com/Phalphalak/springlayout_dsl/raw/master/example_frame.jpg
+
+Code:
+
   require 'springlayout_dsl'
   require 'java'
   
