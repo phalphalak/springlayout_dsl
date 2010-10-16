@@ -1,6 +1,8 @@
 = springlayout_dsl
 
 == Usage
+
+taken from {example.rb}[example.rb]:
   require 'springlayout_dsl'
   require 'java'
   
