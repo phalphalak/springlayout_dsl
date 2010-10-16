@@ -6,7 +6,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "springlayout_dsl"
     gem.summary = %Q{A DSL for Java's SpringLayout}
-    gem.description = %Q{TODO: longer description of your gem}
+    #gem.description = %Q{TODO: longer description of your gem}
     gem.homepage = "http://github.com/phalphalak/springlayout_dsl"
     gem.authors = ["Phalphalak"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
