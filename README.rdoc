@@ -6,7 +6,7 @@ Description goes here.
 
 You will need Java an JRuby
 
-= Setting up JRuby
+== Setting up JRuby
 
 Here is how I have set up jruby to work with Ubuntu 9.04 (Jaunty Jackalope)
 
@@ -20,6 +20,8 @@ Here is how I have set up jruby to work with Ubuntu 9.04 (Jaunty Jackalope)
   jruby -S gem install jeweler
   jruby -S gem install rspec
 
+Now you should be able to
+  jruby -S rake
 == Note on Patches/Pull Requests
  
 * Fork the project.

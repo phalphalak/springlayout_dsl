@@ -7,7 +7,7 @@ java_import java.awt.Component
 class Spring
   
   def + o
-    Spring::sum(self, SpringLayoutHelper::make_spring_proxy(o))
+    Spring::sum(self, SpringLayoutDSL::make_spring_proxy(o))
   end
   
   def * n
@@ -25,7 +25,7 @@ class Spring
   end
   
   def self.maximum(spring1, spring2)
-    Spring::max(SpringLayoutHelper::make_spring_proxy(spring1), SpringLayoutHelper::make_spring_proxy(spring2))
+    Spring::max(SpringLayoutDSL::make_spring_proxy(spring1), SpringLayoutDSL::make_spring_proxy(spring2))
   end
   
   def -@
@@ -35,7 +35,7 @@ class Spring
   
   def - o
     #    p 'called: - o'
-    self + (-(SpringLayoutHelper::make_spring_proxy(o)))
+    self + (-(SpringLayoutDSL::make_spring_proxy(o)))
   end
   
 end
@@ -80,7 +80,7 @@ class Float
   end
 end
 
-class SpringLayoutHelper
+class SpringLayoutDSL
   
   @@directions = [:west,:east,:south,:north, :height, :width] #:width and :height only work with jdk1.6
   
@@ -92,7 +92,7 @@ class SpringLayoutHelper
     raise 'require at least one argument' unless args and args.size>1
     last_spring = nil
     args.each do |value|
-      spring = SpringLayoutHelper::make_spring_proxy(value)
+      spring = SpringLayoutDSL::make_spring_proxy(value)
       if !!last_spring
         last_spring = Spring::max(last_spring, spring)
       else
@@ -138,7 +138,7 @@ class SpringLayoutHelper
         end
       else
         #p 'undefine_constraint_methods'
-        @@directions.each do |edge|
+        (@@directions|@@new_constraints).each do |edge|
           Component.class_eval {undef_method edge}
         end
       end
@@ -155,7 +155,7 @@ class SpringLayoutHelper
     def constraint_writer(edge, layout, constraint)
       Component.class_eval do
         define_method((edge.to_s+"=").to_sym) do |arg| #Argh, under jruby 1.8.7 (called directly) the additional, outer brackets are required due to operator precedence. 
-          spring = SpringLayoutHelper::make_spring_proxy arg
+          spring = SpringLayoutDSL::make_spring_proxy arg
           layout.get_constraints(self).setConstraint(constraint, spring)
         end
       end
@@ -164,7 +164,7 @@ class SpringLayoutHelper
   class << self
     
     def layout(layout, &block)
-      slh = SpringLayoutHelper.new(layout, &block)
+      slh = SpringLayoutDSL.new(layout, &block)
     end
     
     def make_spring_proxy o
