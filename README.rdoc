@@ -2,6 +2,24 @@
 
 Description goes here.
 
+== Setup
+
+You will need Java an JRuby
+
+= Setting up JRuby
+
+Here is how I have set up jruby to work with Ubuntu 9.04 (Jaunty Jackalope)
+
+wget http://jruby.org.s3.amazonaws.com/downloads/1.5.3/jruby-bin-1.5.3.tar.gz
+tar zvxf jruby-bin-1.5.3.tar.gz
+... move the folder whereever you want it installed (e.g. ~/dev/jruby-1.5.3) ...
+... your gems should be found in ~/dev/jruby-1.5.3/lib/ruby/gems/1.8/gems/ ...
+ln -s ~/dev/jruby-1.5.3/bin/jruby /usr/local/bin/jruby-1.5.3
+ln -s /usr/local/bin/jruby-1.5.3 /usr/local/bin/jruby
+jruby -S gem install jruby-openssl (optional)
+jruby -S gem install jeweler
+jruby -S gem install rspec
+
 == Note on Patches/Pull Requests
  
 * Fork the project.
